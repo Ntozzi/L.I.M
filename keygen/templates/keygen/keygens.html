@@ -1,0 +1,30 @@
+{% extends 'portfolio\base.html' %}
+{% block content %}
+
+
+
+
+<div class="container text-center" >
+    <h1>Le générateur fou !! </h1>
+
+    <form action="{% url 'keygen:response' %}">
+
+        <br>
+        <input  type="checkbox"  name="Catégories d'expression" style="float:center" ><span style='color:#1aabe4'>  Catégories d'expression</span>
+        <br>
+
+        <input type="checkbox" name="Catégories de contraintes"><span style='color:#1aabe4'> Catégories de contraintes</span>
+        <br>
+
+        <input type="checkbox" name="Catégories de structure"><span style='color:#1aabe4'> Catégories de structure</span>
+        <br>
+
+        <input type="checkbox" name="À la manière de..."><span style='color:#1aabe4'> À la manière de...</span>
+        <br>
+         <br>
+
+        <input type="submit" value="Un, deux, trois..." class = "btn btn-primary disabled">
+    </form>
+</div>
+
+{% endblock %}

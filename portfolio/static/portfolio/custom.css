@@ -1,0 +1,73 @@
+body
+{
+    background-color: black;
+}
+
+
+
+/* Modify nav background color */
+.navbar-expand-sm {
+            background-color: black;
+        }
+
+/* Modify brand and text color */
+
+.navbar-expand-sm .navbar-brand,
+.navbar-expand-sm .navbar-text {
+            color:#1aabe4;
+     }
+h1 {
+text-shadow:0 0 20px #00FFFC,2px 3px 3px #141414, 0 0 100px #00D4D1;color:#1aabe4;
+background-color:black;
+text-align: center;
+}
+h2 {
+text-shadow:0 0 20px #00FFFC,2px 3px 3px #141414, 0 0 100px #00D4D1;color:#1aabe4;
+background-color:black;
+  color: #1aabe4;
+}
+
+h5 {
+
+  color: #1aabe4;
+    text-align: left;
+}
+
+h3 {
+
+  color: black;
+    text-align: left;
+}
+h4 {
+
+  color: #1aabe4;
+    text-align: left;
+}
+
+.nav-link {
+
+color:#1aabe4;
+
+}
+
+p {
+  color: #1aabe4;
+}
+
+footer {
+background-color: #1aabe4;
+}
+
+div
+{
+
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease; /* Transition de type ease */
+}
+
+div:hover
+{
+    transform: translateX(5px); /* On déplace l'objet */
+}
+

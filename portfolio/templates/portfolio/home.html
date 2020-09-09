@@ -1,0 +1,120 @@
+{% extends 'portfolio\base.html' %}
+{% load static %}
+{% block css_homepage %}
+    <link rel="stylesheet" href="{% static 'portfolio/homepage.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<img src="{% static 'portfolio/Logofinale.jpg' %}" alt="Crazy impro" class="rounded mx-auto d-block" width = "1200" height = "600">
+{% load static %}
+<br>
+<br>
+<a name = "story" ></a>
+
+ <div class="services-container section-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 services section-description wow fadeIn">
+	                    <h2>La L.I.M, c'est quoi ?!</h2>
+	                    <div class="divider-1 wow fadeInUp"><span></span></div>
+	                </div>
+	            </div>
+	            <div class="row">
+                	<div class="col-sm-4 services-box wow fadeInUp">
+                		<div class="row">
+                			<div class="col-sm-4">
+			                	<div class="services-box-icon">
+			                		<i class="fa fa-trophy"></i>
+			                	</div>
+		                	</div>
+	                		<div class="col-sm-8">
+	                    		<h3><a class="scroll-link" href="#portfolio"><span class="colored-text"><strong>Des Spectacles de folies !!!</strong> <i class="fa fa-angle-right"></i></span></a></h3>
+	                    		<p>Nous organisons des spectacles d'improvisation, des rencontres avec différentes équipes venues de contrées lointaines. Mais aussi des représentations théâtrales et match d'impro dans la région de Charleroi et environs.</p>
+	                    	</div>
+	                    </div>
+                    </div>
+                    <div class="col-sm-4 services-box wow fadeInDown">
+	                	<div class="row">
+                			<div class="col-sm-4">
+			                	<div class="services-box-icon">
+			                		<i class="fa fa-cog"></i>
+			                	</div>
+		                	</div>
+	                		<div class="col-sm-8">
+	                    		<h3><a class="scroll-link" href="#more-services"><span class="colored-text"><strong>Des Cours pour débutants et confirmés !</strong> <i class="fa fa-angle-right"></i></span></a></h3>
+	                    		<p>Vous souhaitez suivre des cours d’improvisation et théâtre? Le MAIR vous accueille ! Cours en groupe ou particuliers, pour Enfants (dès 8 ans), Ados & Adultes. Vous apprendrez à construire des histoires avec des lieux, des personnages, des humeurs, des objets… faire vivre tout un univers à partir de votre corps et votre créativité!</p>
+	                    	</div>
+	                    </div>
+                    </div>
+                    <div class="col-sm-4 services-box wow fadeInUp">
+	                	<div class="row">
+                			<div class="col-sm-4">
+			                	<div class="services-box-icon">
+			                		<i class="fa fa-magic"></i>
+			                	</div>
+		                	</div>
+	                		<div class="col-sm-8">
+	                    		<h3><a class="scroll-link" href="#blog"><span class="colored-text"><strong>Et surtout beaucoup de fun !</strong> <i class="fa fa-angle-right"></i></span></a></h3>
+	                    		<p>Nous proposons des animations à la carte, pour des événements privés ou professionnels. Une multitude de personnages aussi fantasques les uns que les autres pour égayer vos événements, apporter une touche de magie et de fantaisie à toutes vos festivités...</p>
+	                    	</div>
+	                    </div>
+                    </div>
+	            </div>
+	        </div>
+        </div>
+
+<br>
+<a name = "coach"></a>
+<h2>Nos coachs !</h2>
+<br>
+
+
+
+{% for project in projects %}
+
+<div name="coach" lass="container px-lg-5">
+  <div class="row row-cols-12">
+    <div class="col-sm-6">
+        <div class="col">
+    <br><h2>{{ project.title }}</h2><img style="float:left;"src="{{project.image.url}}" height =200 width = 200 >
+    <p display:inline-block; width:150px; text-indent: 50px; pading:0.5em>{{ project.description }}</p>
+            </div>
+  </div>
+
+  </div>
+</div>
+
+{% if project.url%}
+<br><a href="{{project.url}}">link</a>
+{% endif %}
+
+
+{% endfor %}
+
+
+<br>
+<br>
+
+<a name = "contact" ></a>
+<footer>
+  <div class="col-sm-5 col-sm">
+    <h3><strong>Retrouvez-nous aussi sur :</strong></h3>
+    <div class="footer-social">
+        <a href="https://www.facebook.com/IMPRO.Le.MAIR/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/user/TheCoachcoco/" target="_blank"><i class="fa fa-youtube"></i></a>
+
+    </div>
+    <div class="footer-copyright">
+        <strong>&copy;2020 - La L.I.M <br>www.theatre-impro.mt <br>infos@theatre-impro.mt <br>Nino : 00356/99.74.34.05 <br>Admin : 00356/xx.xx.xx.xx</strong> <!--<a
+</footer>
+
+{% endblock %}
+
+
+
+
+
+</body>
+</html>
